@@ -1,0 +1,79 @@
+:root {
+  --bg-color: #f5d0d0;
+  --primary-color: #d32f2f;
+  --font-heading: 'Silkscreen', cursive;
+  --font-body: 'VT323', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+button {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  box-shadow: 4px 4px 0 var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+button:active {
+  box-shadow: 0 0 0 var(--primary-color);
+  transform: translate(4px, 4px);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.user-card {
+  border: 3px dashed var(--primary-color);
+  padding: 2rem;
+  background-color: #fce4e4;
+  margin-top: 1rem;
+}
+
+.loading {
+  font-family: var(--font-heading);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
